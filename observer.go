@@ -34,6 +34,11 @@ type FailedHeartbeatObservation struct {
 	LastContact time.Time
 }
 
+type ResumedHeartbeatObservation struct {
+	PeerID      ServerID
+	LastContact time.Time
+}
+
 // nextObserverId is used to provide a unique ID for each observer to aid in
 // deregistration.
 var nextObserverID uint64
